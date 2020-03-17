@@ -22,7 +22,7 @@ resource "random_string" "random" {
 # create a storage account
 resource "azurerm_storage_account" "storage-accont" {
   name                     = "kopicloudstorage${random_string.random.result}"
-  resource_group_name      = azurerm_resource_group.storage-rge.name
+  resource_group_name      = azurerm_resource_group.storage-rg.name
   location                 = azurerm_resource_group.storage-rg.location
   account_tier             = "Standard"
   account_replication_type = "GRS"

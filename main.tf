@@ -12,7 +12,7 @@ resource "azurerm_resource_group" "storage-rg" {
 
 # create a random string to avoid name collisions
 resource "random_string" "random" {
-  length = 16
+  length = 6
   special = false
   upper   = false
   lower   = true
